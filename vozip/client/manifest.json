@@ -1,0 +1,17 @@
+{
+  "name": "VideoCall",
+  "xwalk_app_version": "0.0.1",
+  "start_url": "index.html",
+  "xwalk_package_id": "co.com.vozip.videocall",
+  "xwalk_android_permissions": [
+    "CAMERA",
+    "MODIFY_AUDIO_SETTINGS",
+    "RECORD_AUDIO"
+  ],
+  "icons": [
+     {
+         "src": "icon.png",
+         "sizes": "72x72"
+     }
+ ] 
+}

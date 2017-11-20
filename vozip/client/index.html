@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta name="viewport"
+         content="width=device-width, initial-scale=1.0, user-scalable=no">
+   <meta charset="utf-8">
+   <title>VideoCall</title>
+
+   <style>
+   #credentials, #dialler, #messages {
+     clear: both;
+   }
+   #remote-video {
+     max-width: 300px;
+   }
+   #local-video {
+     max-width: 150px;
+   }
+   </style>
+     <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+   <!-- jQuery library -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+   <!-- Latest compiled JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ </head>
+
+ <body>
+
+   <div>
+     <h2 class="bg-success text-center" >VideoCall</h2>
+   </div>
+
+   <div id="credentials">
+     <p>
+       <strong>Usuario: </strong>
+       <input type="text" id="caller-id" size="20"  class="text-center" placeholder="usuario">
+       <button id="connect" class="btn btn-success">Conectar</button>
+     </p>
+   </div>
+
+   <div id="dialler" data-active="false">
+     <p>
+       <strong>Llamar a:</strong>
+       <input type="select" id="recipient-id" class="text-center" size="19" placeholder="usuario" >
+       </input>
+       <button id="dial" class="btn btn-success">Llamar</button>
+     </p>
+
+     <hr>
+
+     <p><strong>REMOTO:</strong></p>
+     <video id="remote-video" autoplay ></video>
+
+     <hr>
+
+     <p><strong>LOCAL:</strong></p>
+     <video id="local-video" autoplay muted></video>
+   </div>
+
+   <hr>
+
+   <div id="messages">
+   </div>
+
+   <script src="peer.js"></script>
+   <script src="main.js"></script>
+ </body>
+</html>
